@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="06a0e530-fb7a-4666-b590-b69c00589803"
+  name="ModelingMyDocument" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="774e2179-5243-4f31-9189-919211c350a8"
+        name="DocPage"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="3c785246-efcf-4f9c-a109-9897cfd23ea3">
+            <classMoniker
+              Id="a9cf1cba-1770-4b95-b0f5-6227f78e0a9c"
+              LastKnownName="Document"
+              LastKnownLocation="ModelingMyDocument.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="a9835b4e-8985-48e1-9acb-e7248cf444d7"
+            name="Doc"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="67cf0fb6-fa71-4e6f-9b02-6adbc6635737"
+            name="DocumentInitialization"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="447b15fd-8b7e-4788-9586-031b24843f03"
+            name="SetControlProperties"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="3ec3ed6a-39af-424b-a1da-5fb59ce1a2a9"
+            name="DocumentToControls"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="0203e781-01c3-4cb0-9aae-8b1817710320"
+            name="RenderDocumentHeader"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="007e11ed-5a4b-49f0-980b-d7aff4b0e977"
+            name="RenderDocNumDateNameRows"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="99ca01d6-b89d-4d89-a6a4-7c32f51921a7"
+            name="StartRenderVariablePart"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="72d82143-48e0-481e-94a6-3fbe85f8055b"
+            name="EndRenderVariablePart"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a9cf1cba-1770-4b95-b0f5-6227f78e0a9c"
+        name="Document"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="ab2512ff-336e-4f38-9817-f902fa6b4a70"
+            name="Type"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="ec72ab51-3115-4a09-8bdc-b050d5eab1ad"
+            name="GetDocField"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="674a8ba3-802c-4e5f-a1c0-141e612de199"
+                  name="id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8483c6bf-baf1-4f02-8f73-5024ec29c2f3"
+                  direction="Return">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="0931d2b4-65b4-490b-99f3-afd342297f2f"
+                      LastKnownName="DocField"
+                      LastKnownLocation="ModelingMyDocument.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ec4e7ee1-8bdd-4f36-87bb-35a64f6892cf"
+        name="MyDocPage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="2364c56d-cc49-4862-b8c8-a55034853565">
+            <classMoniker
+              Id="1778e4ff-6b94-4603-a4b2-0573f458c03f"
+              LastKnownName="MyDocument"
+              LastKnownLocation="ModelingMyDocument.uml" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="8f13124a-a6d9-4b96-86f8-effad1f93335"
+            isSubstitutable="false">
+            <classMoniker
+              Id="774e2179-5243-4f31-9189-919211c350a8"
+              LastKnownName="DocPage"
+              LastKnownLocation="ModelingMyDocument.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="41a2f2aa-5360-4d24-98df-8f954ac2b849"
+            name="DocumentInitialization"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="232bafb6-7a64-48c2-ae48-2795efab027b"
+            name="DocumentToControls"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="c5c9e287-9ae9-4901-a94c-5948c94b9810"
+            name="SetControlProperties"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="54f9a442-ee1f-453b-ab61-e38605dc57dc"
+            name="MyFormField_Changed"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="45f4fe7c-3236-483d-a690-1d8712e10f04"
+        name="DocTypeEnum"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1778e4ff-6b94-4603-a4b2-0573f458c03f"
+        name="MyDocument"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="04d391a6-88e3-44c7-8dbb-6807c4adbb9d">
+            <interfaceMoniker
+              Id="45f4fe7c-3236-483d-a690-1d8712e10f04"
+              LastKnownName="DocTypeEnum"
+              LastKnownLocation="ModelingMyDocument.uml" />
+          </dependency>
+          <dependency
+            Id="aec64cd0-4a97-4a62-890e-28fa19989d1d">
+            <enumerationMoniker
+              Id="dcf06ac8-b4ea-4290-9e0c-040318820c5f"
+              LastKnownName="DocTypeEnum"
+              LastKnownLocation="ModelingMyDocument.uml" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="d3fa23eb-01ef-498a-925f-f2d814dfb05f"
+            isSubstitutable="false">
+            <classMoniker
+              Id="a9cf1cba-1770-4b95-b0f5-6227f78e0a9c"
+              LastKnownName="Document"
+              LastKnownLocation="ModelingMyDocument.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="cf2a6298-2ff9-41a3-8c99-b2420eed0f6e"
+            name="MyField"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="1e22ae6c-d811-4dd9-a3a8-1fb5244bcc8a"
+            name="MyDocument"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="dcf06ac8-b4ea-4290-9e0c-040318820c5f"
+        name="DocTypeEnum"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="0931d2b4-65b4-490b-99f3-afd342297f2f"
+        name="DocField" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
